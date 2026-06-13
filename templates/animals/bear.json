@@ -1,0 +1,308 @@
+{
+  "id": "bear",
+  "name": "小熊",
+  "aliases": ["熊", "bear", "熊熊", "小熊维尼"],
+  "baseSize": { "width": 200, "height": 200 },
+  "colorSlots": {
+    "body": { "default": "#92400e", "field": "fillColor" },
+    "belly": { "default": "#fde68a", "field": "fillColor" },
+    "ear": { "default": "#78350f", "field": "fillColor" },
+    "ear_inner": { "default": "#fde68a", "field": "fillColor" },
+    "muzzle": { "default": "#fde68a", "field": "fillColor" },
+    "nose": { "default": "#1e1e1e", "field": "fillColor" },
+    "blush": { "default": "#fca5a5", "field": "fillColor" }
+  },
+  "variants": {},
+  "drawingOrder": [
+    "body",
+    "belly",
+    "left_ear", "right_ear", "left_ear_inner", "right_ear_inner",
+    "head",
+    "muzzle",
+    "nose",
+    "mouth",
+    "left_eye", "right_eye",
+    "left_pupil", "right_pupil",
+    "nose_highlight",
+    "left_highlight_big", "left_highlight_small",
+    "right_highlight_big", "right_highlight_small",
+    "left_blush", "right_blush",
+    "left_arm", "right_arm",
+    "left_foot_pad", "right_foot_pad",
+    "left_foot", "right_foot",
+    "eyebrow_left", "eyebrow_right",
+    "belly_spot"
+  ],
+  "parts": [
+    {
+      "id": "body",
+      "type": "ellipse",
+      "name": "身体",
+      "relX": 0.5, "relY": 0.68,
+      "params": { "radiusX": 50, "radiusY": 46 },
+      "strokeColor": "#1e1e1e", "fillColor": "#92400e", "fill": true,
+      "strokeWidth": 2.5, "opacity": 1, "colorSlot": "body", "drawingOrder": 1
+    },
+    {
+      "id": "belly",
+      "type": "ellipse",
+      "name": "肚皮",
+      "relX": 0.5, "relY": 0.72,
+      "params": { "radiusX": 34, "radiusY": 30 },
+      "strokeColor": "#1e1e1e", "fillColor": "#fde68a", "fill": true,
+      "strokeWidth": 2.0, "opacity": 1, "colorSlot": "belly", "drawingOrder": 2
+    },
+    {
+      "id": "belly_spot",
+      "type": "ellipse",
+      "name": "肚皮斑点",
+      "relX": 0.5, "relY": 0.74,
+      "params": { "radiusX": 18, "radiusY": 12 },
+      "strokeColor": "#fbbf24", "fillColor": "#fbbf24", "fill": true,
+      "strokeWidth": 0, "opacity": 0.5, "colorSlot": "belly", "drawingOrder": 3
+    },
+    {
+      "id": "head",
+      "type": "circle",
+      "name": "头部",
+      "relX": 0.5, "relY": 0.32,
+      "params": { "radius": 48 },
+      "strokeColor": "#1e1e1e", "fillColor": "#92400e", "fill": true,
+      "strokeWidth": 2.5, "opacity": 1, "colorSlot": "body", "drawingOrder": 10
+    },
+    {
+      "id": "left_ear",
+      "type": "circle",
+      "name": "左耳",
+      "relX": 0.28, "relY": 0.14,
+      "params": { "radius": 18 },
+      "strokeColor": "#1e1e1e", "fillColor": "#78350f", "fill": true,
+      "strokeWidth": 2.5, "opacity": 1, "colorSlot": "ear", "drawingOrder": 8
+    },
+    {
+      "id": "right_ear",
+      "type": "circle",
+      "name": "右耳",
+      "relX": 0.72, "relY": 0.14,
+      "params": { "radius": 18 },
+      "strokeColor": "#1e1e1e", "fillColor": "#78350f", "fill": true,
+      "strokeWidth": 2.5, "opacity": 1, "colorSlot": "ear", "drawingOrder": 8
+    },
+    {
+      "id": "left_ear_inner",
+      "type": "circle",
+      "name": "左耳内",
+      "relX": 0.28, "relY": 0.14,
+      "params": { "radius": 10 },
+      "strokeColor": "#1e1e1e", "fillColor": "#fde68a", "fill": true,
+      "strokeWidth": 2.0, "opacity": 1, "colorSlot": "ear_inner", "drawingOrder": 9
+    },
+    {
+      "id": "right_ear_inner",
+      "type": "circle",
+      "name": "右耳内",
+      "relX": 0.72, "relY": 0.14,
+      "params": { "radius": 10 },
+      "strokeColor": "#1e1e1e", "fillColor": "#fde68a", "fill": true,
+      "strokeWidth": 2.0, "opacity": 1, "colorSlot": "ear_inner", "drawingOrder": 9
+    },
+    {
+      "id": "muzzle",
+      "type": "ellipse",
+      "name": "口鼻区域",
+      "relX": 0.5, "relY": 0.38,
+      "params": { "radiusX": 22, "radiusY": 18 },
+      "strokeColor": "#1e1e1e", "fillColor": "#fde68a", "fill": true,
+      "strokeWidth": 2.0, "opacity": 1, "colorSlot": "muzzle", "drawingOrder": 15
+    },
+    {
+      "id": "nose",
+      "type": "ellipse",
+      "name": "鼻子",
+      "relX": 0.5, "relY": 0.33,
+      "params": { "radiusX": 8, "radiusY": 6 },
+      "strokeColor": "#1e1e1e", "fillColor": "#1e1e1e", "fill": true,
+      "strokeWidth": 2.0, "opacity": 1, "colorSlot": "nose", "drawingOrder": 20
+    },
+    {
+      "id": "nose_highlight",
+      "type": "circle",
+      "name": "鼻子高光",
+      "relX": 0.48, "relY": 0.32,
+      "params": { "radius": 2.5 },
+      "strokeColor": "#ffffff", "fillColor": "#ffffff", "fill": true,
+      "strokeWidth": 0, "opacity": 0.7, "drawingOrder": 43
+    },
+    {
+      "id": "mouth",
+      "type": "path",
+      "name": "嘴巴",
+      "relX": 0.5, "relY": 0.39,
+      "params": { "points": [[-8, 0], [-4, 5], [0, 2], [4, 5], [8, 0]], "closed": false },
+      "strokeColor": "#1e1e1e", "fillColor": "transparent", "fill": false,
+      "strokeWidth": 2.0, "opacity": 1, "drawingOrder": 22
+    },
+    {
+      "id": "left_eye",
+      "type": "circle",
+      "name": "左眼白",
+      "relX": 0.38, "relY": 0.28,
+      "params": { "radius": 10 },
+      "strokeColor": "#1e1e1e", "fillColor": "#ffffff", "fill": true,
+      "strokeWidth": 2.0, "opacity": 1, "drawingOrder": 20
+    },
+    {
+      "id": "right_eye",
+      "type": "circle",
+      "name": "右眼白",
+      "relX": 0.62, "relY": 0.28,
+      "params": { "radius": 10 },
+      "strokeColor": "#1e1e1e", "fillColor": "#ffffff", "fill": true,
+      "strokeWidth": 2.0, "opacity": 1, "drawingOrder": 20
+    },
+    {
+      "id": "left_pupil",
+      "type": "circle",
+      "name": "左瞳孔",
+      "relX": 0.39, "relY": 0.29,
+      "params": { "radius": 6 },
+      "strokeColor": "#1e1e1e", "fillColor": "#1e1e1e", "fill": true,
+      "strokeWidth": 1.5, "opacity": 1, "drawingOrder": 22
+    },
+    {
+      "id": "right_pupil",
+      "type": "circle",
+      "name": "右瞳孔",
+      "relX": 0.61, "relY": 0.29,
+      "params": { "radius": 6 },
+      "strokeColor": "#1e1e1e", "fillColor": "#1e1e1e", "fill": true,
+      "strokeWidth": 1.5, "opacity": 1, "drawingOrder": 22
+    },
+    {
+      "id": "left_highlight_big",
+      "type": "circle",
+      "name": "左眼大高光",
+      "relX": 0.41, "relY": 0.27,
+      "params": { "radius": 3 },
+      "strokeColor": "#ffffff", "fillColor": "#ffffff", "fill": true,
+      "strokeWidth": 0, "opacity": 1, "drawingOrder": 41
+    },
+    {
+      "id": "left_highlight_small",
+      "type": "circle",
+      "name": "左眼小高光",
+      "relX": 0.37, "relY": 0.31,
+      "params": { "radius": 1.8 },
+      "strokeColor": "#ffffff", "fillColor": "#ffffff", "fill": true,
+      "strokeWidth": 0, "opacity": 1, "drawingOrder": 42
+    },
+    {
+      "id": "right_highlight_big",
+      "type": "circle",
+      "name": "右眼大高光",
+      "relX": 0.63, "relY": 0.27,
+      "params": { "radius": 3 },
+      "strokeColor": "#ffffff", "fillColor": "#ffffff", "fill": true,
+      "strokeWidth": 0, "opacity": 1, "drawingOrder": 41
+    },
+    {
+      "id": "right_highlight_small",
+      "type": "circle",
+      "name": "右眼小高光",
+      "relX": 0.59, "relY": 0.31,
+      "params": { "radius": 1.8 },
+      "strokeColor": "#ffffff", "fillColor": "#ffffff", "fill": true,
+      "strokeWidth": 0, "opacity": 1, "drawingOrder": 42
+    },
+    {
+      "id": "left_blush",
+      "type": "ellipse",
+      "name": "左腮红",
+      "relX": 0.3, "relY": 0.36,
+      "params": { "radiusX": 10, "radiusY": 6 },
+      "strokeColor": "#fca5a5", "fillColor": "#fca5a5", "fill": true,
+      "strokeWidth": 0, "opacity": 0.4, "colorSlot": "blush", "drawingOrder": 45
+    },
+    {
+      "id": "right_blush",
+      "type": "ellipse",
+      "name": "右腮红",
+      "relX": 0.7, "relY": 0.36,
+      "params": { "radiusX": 10, "radiusY": 6 },
+      "strokeColor": "#fca5a5", "fillColor": "#fca5a5", "fill": true,
+      "strokeWidth": 0, "opacity": 0.4, "colorSlot": "blush", "drawingOrder": 45
+    },
+    {
+      "id": "left_arm",
+      "type": "ellipse",
+      "name": "左臂",
+      "relX": 0.22, "relY": 0.62,
+      "params": { "radiusX": 14, "radiusY": 22 },
+      "strokeColor": "#1e1e1e", "fillColor": "#92400e", "fill": true,
+      "strokeWidth": 2.5, "opacity": 1, "colorSlot": "body", "drawingOrder": 5
+    },
+    {
+      "id": "right_arm",
+      "type": "ellipse",
+      "name": "右臂",
+      "relX": 0.78, "relY": 0.62,
+      "params": { "radiusX": 14, "radiusY": 22 },
+      "strokeColor": "#1e1e1e", "fillColor": "#92400e", "fill": true,
+      "strokeWidth": 2.5, "opacity": 1, "colorSlot": "body", "drawingOrder": 5
+    },
+    {
+      "id": "left_foot",
+      "type": "ellipse",
+      "name": "左脚",
+      "relX": 0.35, "relY": 0.92,
+      "params": { "radiusX": 18, "radiusY": 10 },
+      "strokeColor": "#1e1e1e", "fillColor": "#78350f", "fill": true,
+      "strokeWidth": 2.5, "opacity": 1, "colorSlot": "ear", "drawingOrder": 4
+    },
+    {
+      "id": "right_foot",
+      "type": "ellipse",
+      "name": "右脚",
+      "relX": 0.65, "relY": 0.92,
+      "params": { "radiusX": 18, "radiusY": 10 },
+      "strokeColor": "#1e1e1e", "fillColor": "#78350f", "fill": true,
+      "strokeWidth": 2.5, "opacity": 1, "colorSlot": "ear", "drawingOrder": 4
+    },
+    {
+      "id": "left_foot_pad",
+      "type": "ellipse",
+      "name": "左脚掌垫",
+      "relX": 0.35, "relY": 0.93,
+      "params": { "radiusX": 10, "radiusY": 5 },
+      "strokeColor": "#1e1e1e", "fillColor": "#fde68a", "fill": true,
+      "strokeWidth": 1.5, "opacity": 1, "colorSlot": "muzzle", "drawingOrder": 4
+    },
+    {
+      "id": "right_foot_pad",
+      "type": "ellipse",
+      "name": "右脚掌垫",
+      "relX": 0.65, "relY": 0.93,
+      "params": { "radiusX": 10, "radiusY": 5 },
+      "strokeColor": "#1e1e1e", "fillColor": "#fde68a", "fill": true,
+      "strokeWidth": 1.5, "opacity": 1, "colorSlot": "muzzle", "drawingOrder": 4
+    },
+    {
+      "id": "eyebrow_left",
+      "type": "path",
+      "name": "左眉毛",
+      "relX": 0.38, "relY": 0.22,
+      "params": { "points": [[-6, 0], [0, -2], [6, 0]], "closed": false },
+      "strokeColor": "#1e1e1e", "fillColor": "transparent", "fill": false,
+      "strokeWidth": 2.0, "opacity": 0.6, "drawingOrder": 35
+    },
+    {
+      "id": "eyebrow_right",
+      "type": "path",
+      "name": "右眉毛",
+      "relX": 0.62, "relY": 0.22,
+      "params": { "points": [[-6, 0], [0, -2], [6, 0]], "closed": false },
+      "strokeColor": "#1e1e1e", "fillColor": "transparent", "fill": false,
+      "strokeWidth": 2.0, "opacity": 0.6, "drawingOrder": 35
+    }
+  ]
+}

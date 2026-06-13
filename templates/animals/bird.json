@@ -1,0 +1,312 @@
+{
+  "id": "bird",
+  "name": "小鸟",
+  "aliases": ["鸟儿", "bird", "鸟"],
+  "baseSize": { "width": 200, "height": 200 },
+  "colorSlots": {
+    "body": { "default": "#60a5fa", "field": "fillColor" },
+    "beak": { "default": "#fbbf24", "field": "fillColor" },
+    "belly": { "default": "#bfdbfe", "field": "fillColor" },
+    "blush": { "default": "#fca5a5", "field": "fillColor" }
+  },
+  "variants": {},
+  "drawingOrder": [
+    "tail_feather_3", "tail_feather_2", "tail_feather_1",
+    "body",
+    "belly",
+    "left_wing", "right_wing",
+    "wing_detail_left", "wing_detail_right",
+    "head",
+    "left_eye", "right_eye",
+    "left_pupil", "right_pupil",
+    "left_highlight_big", "left_highlight_small",
+    "right_highlight_big", "right_highlight_small",
+    "beak_top", "beak_bottom",
+    "left_blush", "right_blush",
+    "left_foot", "right_foot",
+    "left_leg", "right_leg",
+    "head_tuft_1", "head_tuft_2", "head_tuft_3",
+    "left_cheek_line", "right_cheek_line"
+  ],
+  "parts": [
+    {
+      "id": "body",
+      "type": "ellipse",
+      "name": "身体",
+      "relX": 0.5, "relY": 0.6,
+      "params": { "radiusX": 42, "radiusY": 48 },
+      "strokeColor": "#1e1e1e", "fillColor": "#60a5fa", "fill": true,
+      "strokeWidth": 2.5, "opacity": 1, "colorSlot": "body", "drawingOrder": 1
+    },
+    {
+      "id": "belly",
+      "type": "ellipse",
+      "name": "肚皮",
+      "relX": 0.5, "relY": 0.65,
+      "params": { "radiusX": 28, "radiusY": 30 },
+      "strokeColor": "#1e1e1e", "fillColor": "#bfdbfe", "fill": true,
+      "strokeWidth": 2.0, "opacity": 1, "colorSlot": "belly", "drawingOrder": 2
+    },
+    {
+      "id": "head",
+      "type": "circle",
+      "name": "头部",
+      "relX": 0.5, "relY": 0.32,
+      "params": { "radius": 44 },
+      "strokeColor": "#1e1e1e", "fillColor": "#60a5fa", "fill": true,
+      "strokeWidth": 2.5, "opacity": 1, "colorSlot": "body", "drawingOrder": 10
+    },
+    {
+      "id": "left_eye",
+      "type": "circle",
+      "name": "左眼白",
+      "relX": 0.38, "relY": 0.28,
+      "params": { "radius": 14 },
+      "strokeColor": "#1e1e1e", "fillColor": "#ffffff", "fill": true,
+      "strokeWidth": 2.0, "opacity": 1, "drawingOrder": 20
+    },
+    {
+      "id": "right_eye",
+      "type": "circle",
+      "name": "右眼白",
+      "relX": 0.62, "relY": 0.28,
+      "params": { "radius": 14 },
+      "strokeColor": "#1e1e1e", "fillColor": "#ffffff", "fill": true,
+      "strokeWidth": 2.0, "opacity": 1, "drawingOrder": 20
+    },
+    {
+      "id": "left_pupil",
+      "type": "circle",
+      "name": "左瞳孔",
+      "relX": 0.40, "relY": 0.29,
+      "params": { "radius": 8 },
+      "strokeColor": "#1e1e1e", "fillColor": "#1e1e1e", "fill": true,
+      "strokeWidth": 1.5, "opacity": 1, "drawingOrder": 22
+    },
+    {
+      "id": "right_pupil",
+      "type": "circle",
+      "name": "右瞳孔",
+      "relX": 0.60, "relY": 0.29,
+      "params": { "radius": 8 },
+      "strokeColor": "#1e1e1e", "fillColor": "#1e1e1e", "fill": true,
+      "strokeWidth": 1.5, "opacity": 1, "drawingOrder": 22
+    },
+    {
+      "id": "left_highlight_big",
+      "type": "circle",
+      "name": "左眼大高光",
+      "relX": 0.43, "relY": 0.26,
+      "params": { "radius": 4 },
+      "strokeColor": "#ffffff", "fillColor": "#ffffff", "fill": true,
+      "strokeWidth": 0, "opacity": 1, "drawingOrder": 41
+    },
+    {
+      "id": "left_highlight_small",
+      "type": "circle",
+      "name": "左眼小高光",
+      "relX": 0.37, "relY": 0.31,
+      "params": { "radius": 2.5 },
+      "strokeColor": "#ffffff", "fillColor": "#ffffff", "fill": true,
+      "strokeWidth": 0, "opacity": 1, "drawingOrder": 42
+    },
+    {
+      "id": "right_highlight_big",
+      "type": "circle",
+      "name": "右眼大高光",
+      "relX": 0.63, "relY": 0.26,
+      "params": { "radius": 4 },
+      "strokeColor": "#ffffff", "fillColor": "#ffffff", "fill": true,
+      "strokeWidth": 0, "opacity": 1, "drawingOrder": 41
+    },
+    {
+      "id": "right_highlight_small",
+      "type": "circle",
+      "name": "右眼小高光",
+      "relX": 0.57, "relY": 0.31,
+      "params": { "radius": 2.5 },
+      "strokeColor": "#ffffff", "fillColor": "#ffffff", "fill": true,
+      "strokeWidth": 0, "opacity": 1, "drawingOrder": 42
+    },
+    {
+      "id": "beak_top",
+      "type": "triangle",
+      "name": "上喙",
+      "relX": 0.5, "relY": 0.35,
+      "params": { "points": [[0, -8], [-10, 6], [10, 6]] },
+      "strokeColor": "#1e1e1e", "fillColor": "#fbbf24", "fill": true,
+      "strokeWidth": 2.0, "opacity": 1, "colorSlot": "beak", "drawingOrder": 25
+    },
+    {
+      "id": "beak_bottom",
+      "type": "triangle",
+      "name": "下喙",
+      "relX": 0.5, "relY": 0.38,
+      "params": { "points": [[-7, 0], [7, 0], [0, 8]] },
+      "strokeColor": "#1e1e1e", "fillColor": "#f59e0b", "fill": true,
+      "strokeWidth": 2.0, "opacity": 1, "colorSlot": "beak", "drawingOrder": 26
+    },
+    {
+      "id": "left_wing",
+      "type": "ellipse",
+      "name": "左翅膀",
+      "relX": 0.22, "relY": 0.55,
+      "params": { "radiusX": 14, "radiusY": 30 },
+      "strokeColor": "#1e1e1e", "fillColor": "#3b82f6", "fill": true,
+      "strokeWidth": 2.0, "opacity": 1, "colorSlot": "body", "drawingOrder": 5
+    },
+    {
+      "id": "right_wing",
+      "type": "ellipse",
+      "name": "右翅膀",
+      "relX": 0.78, "relY": 0.55,
+      "params": { "radiusX": 14, "radiusY": 30 },
+      "strokeColor": "#1e1e1e", "fillColor": "#3b82f6", "fill": true,
+      "strokeWidth": 2.0, "opacity": 1, "colorSlot": "body", "drawingOrder": 5
+    },
+    {
+      "id": "tail_feather_1",
+      "type": "ellipse",
+      "name": "尾羽上",
+      "relX": 0.5, "relY": 0.92,
+      "params": { "radiusX": 6, "radiusY": 18 },
+      "strokeColor": "#1e1e1e", "fillColor": "#3b82f6", "fill": true,
+      "strokeWidth": 2.0, "opacity": 1, "colorSlot": "body", "drawingOrder": 0
+    },
+    {
+      "id": "tail_feather_2",
+      "type": "ellipse",
+      "name": "尾羽左",
+      "relX": 0.4, "relY": 0.93,
+      "params": { "radiusX": 5, "radiusY": 16 },
+      "strokeColor": "#1e1e1e", "fillColor": "#2563eb", "fill": true,
+      "strokeWidth": 2.0, "opacity": 1, "colorSlot": "body", "drawingOrder": 0
+    },
+    {
+      "id": "tail_feather_3",
+      "type": "ellipse",
+      "name": "尾羽右",
+      "relX": 0.6, "relY": 0.93,
+      "params": { "radiusX": 5, "radiusY": 16 },
+      "strokeColor": "#1e1e1e", "fillColor": "#2563eb", "fill": true,
+      "strokeWidth": 2.0, "opacity": 1, "colorSlot": "body", "drawingOrder": 0
+    },
+    {
+      "id": "left_blush",
+      "type": "ellipse",
+      "name": "左腮红",
+      "relX": 0.3, "relY": 0.36,
+      "params": { "radiusX": 10, "radiusY": 6 },
+      "strokeColor": "#fca5a5", "fillColor": "#fca5a5", "fill": true,
+      "strokeWidth": 0, "opacity": 0.4, "colorSlot": "blush", "drawingOrder": 45
+    },
+    {
+      "id": "right_blush",
+      "type": "ellipse",
+      "name": "右腮红",
+      "relX": 0.7, "relY": 0.36,
+      "params": { "radiusX": 10, "radiusY": 6 },
+      "strokeColor": "#fca5a5", "fillColor": "#fca5a5", "fill": true,
+      "strokeWidth": 0, "opacity": 0.4, "colorSlot": "blush", "drawingOrder": 45
+    },
+    {
+      "id": "left_leg",
+      "type": "line",
+      "name": "左腿",
+      "relX": 0.4, "relY": 0.85,
+      "params": { "x2": 0, "y2": 16 },
+      "strokeColor": "#f59e0b", "fillColor": "transparent", "fill": false,
+      "strokeWidth": 2.5, "opacity": 1, "drawingOrder": 30
+    },
+    {
+      "id": "right_leg",
+      "type": "line",
+      "name": "右腿",
+      "relX": 0.6, "relY": 0.85,
+      "params": { "x2": 0, "y2": 16 },
+      "strokeColor": "#f59e0b", "fillColor": "transparent", "fill": false,
+      "strokeWidth": 2.5, "opacity": 1, "drawingOrder": 30
+    },
+    {
+      "id": "left_foot",
+      "type": "path",
+      "name": "左脚爪",
+      "relX": 0.4, "relY": 0.93,
+      "params": { "points": [[-8, 6], [0, 0], [8, 6], [0, 3], [-5, 9], [0, 3], [5, 9]], "closed": false },
+      "strokeColor": "#f59e0b", "fillColor": "transparent", "fill": false,
+      "strokeWidth": 2.0, "opacity": 1, "drawingOrder": 31
+    },
+    {
+      "id": "right_foot",
+      "type": "path",
+      "name": "右脚爪",
+      "relX": 0.6, "relY": 0.93,
+      "params": { "points": [[-8, 6], [0, 0], [8, 6], [0, 3], [-5, 9], [0, 3], [5, 9]], "closed": false },
+      "strokeColor": "#f59e0b", "fillColor": "transparent", "fill": false,
+      "strokeWidth": 2.0, "opacity": 1, "drawingOrder": 31
+    },
+    {
+      "id": "head_tuft_1",
+      "type": "path",
+      "name": "头顶羽毛1",
+      "relX": 0.48, "relY": 0.13,
+      "params": { "points": [[0, 0], [-4, -14]], "closed": false },
+      "strokeColor": "#1e1e1e", "fillColor": "transparent", "fill": false,
+      "strokeWidth": 2.5, "opacity": 1, "drawingOrder": 35
+    },
+    {
+      "id": "head_tuft_2",
+      "type": "path",
+      "name": "头顶羽毛2",
+      "relX": 0.5, "relY": 0.12,
+      "params": { "points": [[0, 0], [0, -16]], "closed": false },
+      "strokeColor": "#1e1e1e", "fillColor": "transparent", "fill": false,
+      "strokeWidth": 2.5, "opacity": 1, "drawingOrder": 35
+    },
+    {
+      "id": "head_tuft_3",
+      "type": "path",
+      "name": "头顶羽毛3",
+      "relX": 0.52, "relY": 0.13,
+      "params": { "points": [[0, 0], [4, -14]], "closed": false },
+      "strokeColor": "#1e1e1e", "fillColor": "transparent", "fill": false,
+      "strokeWidth": 2.5, "opacity": 1, "drawingOrder": 35
+    },
+    {
+      "id": "left_cheek_line",
+      "type": "path",
+      "name": "左脸颊线",
+      "relX": 0.28, "relY": 0.38,
+      "params": { "points": [[0, -3], [3, 0], [0, 3]], "closed": false },
+      "strokeColor": "#1e1e1e", "fillColor": "transparent", "fill": false,
+      "strokeWidth": 1.5, "opacity": 0.5, "drawingOrder": 38
+    },
+    {
+      "id": "right_cheek_line",
+      "type": "path",
+      "name": "右脸颊线",
+      "relX": 0.72, "relY": 0.38,
+      "params": { "points": [[0, -3], [-3, 0], [0, 3]], "closed": false },
+      "strokeColor": "#1e1e1e", "fillColor": "transparent", "fill": false,
+      "strokeWidth": 1.5, "opacity": 0.5, "drawingOrder": 38
+    },
+    {
+      "id": "wing_detail_left",
+      "type": "path",
+      "name": "左翅膀纹路",
+      "relX": 0.22, "relY": 0.52,
+      "params": { "points": [[-4, -10], [0, 0], [-4, 10]], "closed": false },
+      "strokeColor": "#1e1e1e", "fillColor": "transparent", "fill": false,
+      "strokeWidth": 1.5, "opacity": 0.4, "drawingOrder": 6
+    },
+    {
+      "id": "wing_detail_right",
+      "type": "path",
+      "name": "右翅膀纹路",
+      "relX": 0.78, "relY": 0.52,
+      "params": { "points": [[4, -10], [0, 0], [4, 10]], "closed": false },
+      "strokeColor": "#1e1e1e", "fillColor": "transparent", "fill": false,
+      "strokeWidth": 1.5, "opacity": 0.4, "drawingOrder": 6
+    }
+  ]
+}
