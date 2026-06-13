@@ -1,0 +1,1 @@
+// StorageAdapter.js — placeholder

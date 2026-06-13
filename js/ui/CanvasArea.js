@@ -1,0 +1,1 @@
+// CanvasArea.js — placeholder

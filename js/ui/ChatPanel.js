@@ -1,0 +1,1 @@
+// ChatPanel.js — placeholder

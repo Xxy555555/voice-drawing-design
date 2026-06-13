@@ -1,0 +1,1 @@
+// HistoryManager.js — placeholder

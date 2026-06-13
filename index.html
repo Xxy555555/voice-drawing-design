@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AI 语音绘图工具 — 纯语音驱动的Q版风格绘图">
+  <title>AI 语音绘图工具</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="app">
+    <!-- 顶栏 -->
+    <header class="top-bar">
+      <div class="top-bar-left">
+        <button id="btn-sidebar-toggle" class="icon-btn" aria-label="切换侧栏">☰</button>
+        <span class="app-title">🎨 AI 语音绘图</span>
+      </div>
+      <div class="top-bar-center">
+        <button id="btn-new-conv" class="btn btn-sm">＋ 新建对话</button>
+      </div>
+      <div class="top-bar-right">
+        <button id="btn-settings" class="icon-btn" aria-label="设置">⚙️</button>
+        <button id="btn-voice-toggle" class="icon-btn btn-voice" aria-label="语音开关">🎤</button>
+      </div>
+    </header>
+
+    <!-- 主体区域 -->
+    <div class="main-layout">
+      <!-- 侧栏 -->
+      <aside id="sidebar" class="sidebar">
+        <div class="sidebar-header">
+          <h3>对话历史</h3>
+        </div>
+        <div id="sidebar-list" class="sidebar-list">
+          <!-- 动态填充 -->
+        </div>
+      </aside>
+
+      <!-- 对话面板 -->
+      <section class="chat-panel" id="chat-panel">
+        <div id="message-list" class="message-list">
+          <!-- 动态填充 -->
+        </div>
+        <div id="voice-status" class="voice-status hidden">
+          <div class="voice-wave">
+            <span></span><span></span><span></span><span></span><span></span>
+          </div>
+          <span id="voice-interim-text" class="voice-text"></span>
+        </div>
+        <div class="chat-input-area">
+          <input type="text" id="text-input" class="text-input" placeholder="输入指令或按🎤语音控制..." autocomplete="off">
+          <button id="btn-send" class="icon-btn" aria-label="发送">➤</button>
+        </div>
+      </section>
+
+      <!-- 画布区域 -->
+      <section class="canvas-area" id="canvas-area">
+        <div class="canvas-toolbar">
+          <button id="btn-zoom-in" class="icon-btn btn-sm" aria-label="放大">🔍＋</button>
+          <button id="btn-zoom-out" class="icon-btn btn-sm" aria-label="缩小">🔍－</button>
+          <button id="btn-zoom-reset" class="icon-btn btn-sm" aria-label="重置视图">↺</button>
+          <button id="btn-grid" class="icon-btn btn-sm" aria-label="网格">⊞</button>
+        </div>
+        <div class="canvas-wrapper" id="canvas-wrapper">
+          <canvas id="main-canvas"></canvas>
+        </div>
+      </section>
+    </div>
+
+    <!-- 状态栏 -->
+    <footer class="status-bar" id="status-bar">
+      <span id="status-layer">图层：图层 1</span>
+      <span id="status-objects">对象：0</span>
+      <span id="status-selected">选中：无</span>
+      <span id="status-undo">可撤销：0 步</span>
+    </footer>
+
+    <!-- 设置面板（模态框） -->
+    <div id="settings-modal" class="modal hidden">
+      <div class="modal-backdrop"></div>
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>设置</h2>
+          <button id="btn-settings-close" class="icon-btn" aria-label="关闭">✕</button>
+        </div>
+        <div class="modal-body" id="settings-body">
+          <!-- 动态填充 -->
+        </div>
+      </div>
+    </div>
+
+    <!-- 确认弹窗 -->
+    <div id="confirm-modal" class="modal hidden">
+      <div class="modal-backdrop"></div>
+      <div class="modal-content modal-sm">
+        <div class="modal-header">
+          <h2 id="confirm-title">确认操作</h2>
+        </div>
+        <div class="modal-body">
+          <p id="confirm-message"></p>
+        </div>
+        <div class="modal-footer">
+          <button id="btn-confirm-cancel" class="btn">取消</button>
+          <button id="btn-confirm-ok" class="btn btn-primary">确认</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
