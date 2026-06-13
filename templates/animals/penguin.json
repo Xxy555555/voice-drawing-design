@@ -1,0 +1,289 @@
+{
+  "id": "penguin",
+  "name": "企鹅",
+  "aliases": ["小企鹅", "企鹅", "penguin", "Penguin"],
+  "baseSize": { "width": 200, "height": 220 },
+  "colorSlots": {
+    "back": { "default": "#1e1e1e", "field": "fillColor" },
+    "belly": { "default": "#ffffff", "field": "fillColor" },
+    "beak": { "default": "#f97316", "field": "fillColor" },
+    "feet": { "default": "#f97316", "field": "fillColor" },
+    "blush": { "default": "#fca5a5", "field": "fillColor" },
+    "eyeWhite": { "default": "#ffffff", "field": "fillColor" },
+    "eyeBlack": { "default": "#1e1e1e", "field": "fillColor" },
+    "highlight": { "default": "#ffffff", "field": "fillColor" },
+    "flipper": { "default": "#374151", "field": "fillColor" }
+  },
+  "variants": {},
+  "drawingOrder": [
+    "obj_001", "obj_002", "obj_003", "obj_004", "obj_005",
+    "obj_006", "obj_007", "obj_008", "obj_009", "obj_010",
+    "obj_011", "obj_012", "obj_013", "obj_014", "obj_015",
+    "obj_016", "obj_017", "obj_018", "obj_019", "obj_020",
+    "obj_021", "obj_022", "obj_023", "obj_024", "obj_025",
+    "obj_026", "obj_027", "obj_028", "obj_029", "obj_030",
+    "obj_031", "obj_032", "obj_033", "obj_034", "obj_035",
+    "obj_036", "obj_037"
+  ],
+  "parts": [
+    {
+      "id": "obj_001", "type": "ellipse", "name": "身体黑色背面",
+      "relX": 0.50, "relY": 0.62,
+      "params": { "radiusX": 44, "radiusY": 50 },
+      "strokeColor": "#1e1e1e", "fillColor": "#1e1e1e", "fill": true,
+      "strokeWidth": 2.5, "opacity": 1, "colorSlot": "back", "drawingOrder": 1
+    },
+    {
+      "id": "obj_002", "type": "ellipse", "name": "白色肚子",
+      "relX": 0.50, "relY": 0.65,
+      "params": { "radiusX": 32, "radiusY": 40 },
+      "strokeColor": "#ffffff", "fillColor": "#ffffff", "fill": true,
+      "strokeWidth": 2, "opacity": 1, "colorSlot": "belly", "drawingOrder": 2
+    },
+    {
+      "id": "obj_003", "type": "ellipse", "name": "左脚",
+      "relX": 0.38, "relY": 0.93,
+      "params": { "radiusX": 14, "radiusY": 6 },
+      "strokeColor": "#1e1e1e", "fillColor": "#f97316", "fill": true,
+      "strokeWidth": 2.5, "opacity": 1, "colorSlot": "feet", "drawingOrder": 3
+    },
+    {
+      "id": "obj_004", "type": "ellipse", "name": "右脚",
+      "relX": 0.62, "relY": 0.93,
+      "params": { "radiusX": 14, "radiusY": 6 },
+      "strokeColor": "#1e1e1e", "fillColor": "#f97316", "fill": true,
+      "strokeWidth": 2.5, "opacity": 1, "colorSlot": "feet", "drawingOrder": 3
+    },
+    {
+      "id": "obj_005", "type": "path", "name": "左翅膀",
+      "relX": 0.18, "relY": 0.58,
+      "params": { "points": [[8, -25], [2, -10], [-5, 10], [-2, 25], [5, 20], [10, 5], [10, -15]], "closed": true },
+      "strokeColor": "#1e1e1e", "fillColor": "#374151", "fill": true,
+      "strokeWidth": 2.5, "opacity": 1, "colorSlot": "flipper", "drawingOrder": 4
+    },
+    {
+      "id": "obj_006", "type": "path", "name": "右翅膀",
+      "relX": 0.82, "relY": 0.58,
+      "params": { "points": [[-8, -25], [-2, -10], [5, 10], [2, 25], [-5, 20], [-10, 5], [-10, -15]], "closed": true },
+      "strokeColor": "#1e1e1e", "fillColor": "#374151", "fill": true,
+      "strokeWidth": 2.5, "opacity": 1, "colorSlot": "flipper", "drawingOrder": 4
+    },
+    {
+      "id": "obj_007", "type": "circle", "name": "头",
+      "relX": 0.50, "relY": 0.28,
+      "params": { "radius": 40 },
+      "strokeColor": "#1e1e1e", "fillColor": "#1e1e1e", "fill": true,
+      "strokeWidth": 2.5, "opacity": 1, "colorSlot": "back", "drawingOrder": 10
+    },
+    {
+      "id": "obj_008", "type": "ellipse", "name": "脸部白色",
+      "relX": 0.50, "relY": 0.30,
+      "params": { "radiusX": 28, "radiusY": 24 },
+      "strokeColor": "#ffffff", "fillColor": "#ffffff", "fill": true,
+      "strokeWidth": 0, "opacity": 1, "colorSlot": "belly", "drawingOrder": 11
+    },
+    {
+      "id": "obj_009", "type": "circle", "name": "左眼白",
+      "relX": 0.40, "relY": 0.28,
+      "params": { "radius": 9 },
+      "strokeColor": "#1e1e1e", "fillColor": "#ffffff", "fill": true,
+      "strokeWidth": 2, "opacity": 1, "colorSlot": "eyeWhite", "drawingOrder": 20
+    },
+    {
+      "id": "obj_010", "type": "circle", "name": "右眼白",
+      "relX": 0.60, "relY": 0.28,
+      "params": { "radius": 9 },
+      "strokeColor": "#1e1e1e", "fillColor": "#ffffff", "fill": true,
+      "strokeWidth": 2, "opacity": 1, "colorSlot": "eyeWhite", "drawingOrder": 20
+    },
+    {
+      "id": "obj_011", "type": "circle", "name": "左眼珠",
+      "relX": 0.40, "relY": 0.29,
+      "params": { "radius": 5.5 },
+      "strokeColor": "#1e1e1e", "fillColor": "#1e1e1e", "fill": true,
+      "strokeWidth": 0, "opacity": 1, "colorSlot": "eyeBlack", "drawingOrder": 21
+    },
+    {
+      "id": "obj_012", "type": "circle", "name": "右眼珠",
+      "relX": 0.60, "relY": 0.29,
+      "params": { "radius": 5.5 },
+      "strokeColor": "#1e1e1e", "fillColor": "#1e1e1e", "fill": true,
+      "strokeWidth": 0, "opacity": 1, "colorSlot": "eyeBlack", "drawingOrder": 21
+    },
+    {
+      "id": "obj_013", "type": "circle", "name": "左眼高光1",
+      "relX": 0.38, "relY": 0.27,
+      "params": { "radius": 3 },
+      "strokeColor": "#ffffff", "fillColor": "#ffffff", "fill": true,
+      "strokeWidth": 0, "opacity": 0.9, "colorSlot": "highlight", "drawingOrder": 22
+    },
+    {
+      "id": "obj_014", "type": "circle", "name": "左眼高光2",
+      "relX": 0.42, "relY": 0.30,
+      "params": { "radius": 1.5 },
+      "strokeColor": "#ffffff", "fillColor": "#ffffff", "fill": true,
+      "strokeWidth": 0, "opacity": 0.5, "colorSlot": "highlight", "drawingOrder": 22
+    },
+    {
+      "id": "obj_015", "type": "circle", "name": "右眼高光1",
+      "relX": 0.58, "relY": 0.27,
+      "params": { "radius": 3 },
+      "strokeColor": "#ffffff", "fillColor": "#ffffff", "fill": true,
+      "strokeWidth": 0, "opacity": 0.9, "colorSlot": "highlight", "drawingOrder": 22
+    },
+    {
+      "id": "obj_016", "type": "circle", "name": "右眼高光2",
+      "relX": 0.62, "relY": 0.30,
+      "params": { "radius": 1.5 },
+      "strokeColor": "#ffffff", "fillColor": "#ffffff", "fill": true,
+      "strokeWidth": 0, "opacity": 0.5, "colorSlot": "highlight", "drawingOrder": 22
+    },
+    {
+      "id": "obj_017", "type": "triangle", "name": "嘴巴",
+      "relX": 0.50, "relY": 0.35,
+      "params": { "points": [[-8, -3], [0, 7], [8, -3]] },
+      "strokeColor": "#1e1e1e", "fillColor": "#f97316", "fill": true,
+      "strokeWidth": 2, "opacity": 1, "colorSlot": "beak", "drawingOrder": 25
+    },
+    {
+      "id": "obj_018", "type": "line", "name": "嘴巴中线",
+      "relX": 0.50, "relY": 0.35,
+      "params": { "x1": -7, "y1": 0, "x2": 7, "y2": 0 },
+      "strokeColor": "#1e1e1e", "fillColor": "transparent", "fill": false,
+      "strokeWidth": 1.5, "opacity": 0.7, "colorSlot": null, "drawingOrder": 26
+    },
+    {
+      "id": "obj_019", "type": "ellipse", "name": "左腮红",
+      "relX": 0.32, "relY": 0.35,
+      "params": { "radiusX": 9, "radiusY": 5 },
+      "strokeColor": "#fca5a5", "fillColor": "#fca5a5", "fill": true,
+      "strokeWidth": 0, "opacity": 0.4, "colorSlot": "blush", "drawingOrder": 40
+    },
+    {
+      "id": "obj_020", "type": "ellipse", "name": "右腮红",
+      "relX": 0.68, "relY": 0.35,
+      "params": { "radiusX": 9, "radiusY": 5 },
+      "strokeColor": "#fca5a5", "fillColor": "#fca5a5", "fill": true,
+      "strokeWidth": 0, "opacity": 0.4, "colorSlot": "blush", "drawingOrder": 40
+    },
+    {
+      "id": "obj_021", "type": "ellipse", "name": "头顶小毛",
+      "relX": 0.50, "relY": 0.10,
+      "params": { "radiusX": 3, "radiusY": 8 },
+      "strokeColor": "#1e1e1e", "fillColor": "#1e1e1e", "fill": true,
+      "strokeWidth": 0, "opacity": 1, "colorSlot": "back", "drawingOrder": 12
+    },
+    {
+      "id": "obj_022", "type": "ellipse", "name": "头部高光",
+      "relX": 0.42, "relY": 0.14,
+      "params": { "radiusX": 8, "radiusY": 4 },
+      "strokeColor": "#4b5563", "fillColor": "#4b5563", "fill": true,
+      "strokeWidth": 0, "opacity": 0.3, "colorSlot": null, "drawingOrder": 12
+    },
+    {
+      "id": "obj_023", "type": "ellipse", "name": "脖子连接",
+      "relX": 0.50, "relY": 0.44,
+      "params": { "radiusX": 22, "radiusY": 12 },
+      "strokeColor": "#1e1e1e", "fillColor": "#1e1e1e", "fill": true,
+      "strokeWidth": 0, "opacity": 1, "colorSlot": "back", "drawingOrder": 9
+    },
+    {
+      "id": "obj_024", "type": "ellipse", "name": "脖子白色",
+      "relX": 0.50, "relY": 0.46,
+      "params": { "radiusX": 16, "radiusY": 8 },
+      "strokeColor": "#ffffff", "fillColor": "#ffffff", "fill": true,
+      "strokeWidth": 0, "opacity": 1, "colorSlot": "belly", "drawingOrder": 9
+    },
+    {
+      "id": "obj_025", "type": "path", "name": "左翅膀边缘高光",
+      "relX": 0.19, "relY": 0.55,
+      "params": { "points": [[5, -18], [3, -5], [0, 8]], "closed": false },
+      "strokeColor": "#6b7280", "fillColor": "transparent", "fill": false,
+      "strokeWidth": 1.5, "opacity": 0.3, "colorSlot": null, "drawingOrder": 5
+    },
+    {
+      "id": "obj_026", "type": "path", "name": "右翅膀边缘高光",
+      "relX": 0.81, "relY": 0.55,
+      "params": { "points": [[-5, -18], [-3, -5], [0, 8]], "closed": false },
+      "strokeColor": "#6b7280", "fillColor": "transparent", "fill": false,
+      "strokeWidth": 1.5, "opacity": 0.3, "colorSlot": null, "drawingOrder": 5
+    },
+    {
+      "id": "obj_027", "type": "ellipse", "name": "肚子阴影",
+      "relX": 0.50, "relY": 0.72,
+      "params": { "radiusX": 26, "radiusY": 30 },
+      "strokeColor": "#f3f4f6", "fillColor": "#f3f4f6", "fill": true,
+      "strokeWidth": 0, "opacity": 0.4, "colorSlot": null, "drawingOrder": 2
+    },
+    {
+      "id": "obj_028", "type": "ellipse", "name": "脚趾左1",
+      "relX": 0.34, "relY": 0.95,
+      "params": { "radiusX": 3, "radiusY": 4 },
+      "strokeColor": "#1e1e1e", "fillColor": "#f97316", "fill": true,
+      "strokeWidth": 1.5, "opacity": 1, "colorSlot": "feet", "drawingOrder": 3
+    },
+    {
+      "id": "obj_029", "type": "ellipse", "name": "脚趾左2",
+      "relX": 0.38, "relY": 0.95,
+      "params": { "radiusX": 3, "radiusY": 4 },
+      "strokeColor": "#1e1e1e", "fillColor": "#f97316", "fill": true,
+      "strokeWidth": 1.5, "opacity": 1, "colorSlot": "feet", "drawingOrder": 3
+    },
+    {
+      "id": "obj_030", "type": "ellipse", "name": "脚趾左3",
+      "relX": 0.42, "relY": 0.95,
+      "params": { "radiusX": 3, "radiusY": 4 },
+      "strokeColor": "#1e1e1e", "fillColor": "#f97316", "fill": true,
+      "strokeWidth": 1.5, "opacity": 1, "colorSlot": "feet", "drawingOrder": 3
+    },
+    {
+      "id": "obj_031", "type": "ellipse", "name": "脚趾右1",
+      "relX": 0.58, "relY": 0.95,
+      "params": { "radiusX": 3, "radiusY": 4 },
+      "strokeColor": "#1e1e1e", "fillColor": "#f97316", "fill": true,
+      "strokeWidth": 1.5, "opacity": 1, "colorSlot": "feet", "drawingOrder": 3
+    },
+    {
+      "id": "obj_032", "type": "ellipse", "name": "脚趾右2",
+      "relX": 0.62, "relY": 0.95,
+      "params": { "radiusX": 3, "radiusY": 4 },
+      "strokeColor": "#1e1e1e", "fillColor": "#f97316", "fill": true,
+      "strokeWidth": 1.5, "opacity": 1, "colorSlot": "feet", "drawingOrder": 3
+    },
+    {
+      "id": "obj_033", "type": "ellipse", "name": "脚趾右3",
+      "relX": 0.66, "relY": 0.95,
+      "params": { "radiusX": 3, "radiusY": 4 },
+      "strokeColor": "#1e1e1e", "fillColor": "#f97316", "fill": true,
+      "strokeWidth": 1.5, "opacity": 1, "colorSlot": "feet", "drawingOrder": 3
+    },
+    {
+      "id": "obj_034", "type": "path", "name": "胸围黄色标记左",
+      "relX": 0.32, "relY": 0.52,
+      "params": { "points": [[0, -8], [3, 0], [0, 8]], "closed": false },
+      "strokeColor": "#fbbf24", "fillColor": "transparent", "fill": false,
+      "strokeWidth": 2, "opacity": 0.5, "colorSlot": null, "drawingOrder": 7
+    },
+    {
+      "id": "obj_035", "type": "path", "name": "胸围黄色标记右",
+      "relX": 0.68, "relY": 0.52,
+      "params": { "points": [[0, -8], [-3, 0], [0, 8]], "closed": false },
+      "strokeColor": "#fbbf24", "fillColor": "transparent", "fill": false,
+      "strokeWidth": 2, "opacity": 0.5, "colorSlot": null, "drawingOrder": 7
+    },
+    {
+      "id": "obj_036", "type": "ellipse", "name": "头顶圆斑",
+      "relX": 0.50, "relY": 0.12,
+      "params": { "radiusX": 12, "radiusY": 8 },
+      "strokeColor": "#374151", "fillColor": "#374151", "fill": true,
+      "strokeWidth": 0, "opacity": 0.4, "colorSlot": null, "drawingOrder": 12
+    },
+    {
+      "id": "obj_037", "type": "ellipse", "name": "尾巴小突起",
+      "relX": 0.50, "relY": 0.88,
+      "params": { "radiusX": 8, "radiusY": 5 },
+      "strokeColor": "#1e1e1e", "fillColor": "#1e1e1e", "fill": true,
+      "strokeWidth": 0, "opacity": 1, "colorSlot": "back", "drawingOrder": 1
+    }
+  ]
+}

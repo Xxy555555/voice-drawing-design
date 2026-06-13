@@ -1,0 +1,325 @@
+{
+  "id": "fox",
+  "name": "狐狸",
+  "aliases": ["小狐", "狐狸", "fox", "小狐狸", "Fox"],
+  "baseSize": { "width": 200, "height": 220 },
+  "colorSlots": {
+    "fur": { "default": "#ea580c", "field": "fillColor" },
+    "chest": { "default": "#ffffff", "field": "fillColor" },
+    "dark": { "default": "#1e1e1e", "field": "fillColor" },
+    "nose": { "default": "#1e1e1e", "field": "fillColor" },
+    "blush": { "default": "#fca5a5", "field": "fillColor" },
+    "eyeWhite": { "default": "#ffffff", "field": "fillColor" },
+    "eyeBlack": { "default": "#1e1e1e", "field": "fillColor" },
+    "highlight": { "default": "#ffffff", "field": "fillColor" },
+    "innerEar": { "default": "#fdba74", "field": "fillColor" }
+  },
+  "variants": {},
+  "drawingOrder": [
+    "obj_001", "obj_002", "obj_003", "obj_004", "obj_005",
+    "obj_006", "obj_007", "obj_008", "obj_009", "obj_010",
+    "obj_011", "obj_012", "obj_013", "obj_014", "obj_015",
+    "obj_016", "obj_017", "obj_018", "obj_019", "obj_020",
+    "obj_021", "obj_022", "obj_023", "obj_024", "obj_025",
+    "obj_026", "obj_027", "obj_028", "obj_029", "obj_030",
+    "obj_031", "obj_032", "obj_033", "obj_034", "obj_035",
+    "obj_036", "obj_037", "obj_038", "obj_039", "obj_040",
+    "obj_041", "obj_042"
+  ],
+  "parts": [
+    {
+      "id": "obj_001", "type": "path", "name": "大尾巴",
+      "relX": 0.80, "relY": 0.70,
+      "params": { "points": [[0, 0], [15, -10], [30, -30], [35, -50], [25, -60], [10, -55], [-5, -40], [-10, -20], [-5, -5]], "closed": true },
+      "strokeColor": "#1e1e1e", "fillColor": "#ea580c", "fill": true,
+      "strokeWidth": 2.5, "opacity": 1, "colorSlot": "fur", "drawingOrder": 1
+    },
+    {
+      "id": "obj_002", "type": "ellipse", "name": "尾巴白色尖",
+      "relX": 0.92, "relY": 0.38,
+      "params": { "radiusX": 10, "radiusY": 14 },
+      "strokeColor": "#ffffff", "fillColor": "#ffffff", "fill": true,
+      "strokeWidth": 0, "opacity": 1, "colorSlot": "chest", "drawingOrder": 2
+    },
+    {
+      "id": "obj_003", "type": "ellipse", "name": "身体",
+      "relX": 0.50, "relY": 0.68,
+      "params": { "radiusX": 38, "radiusY": 34 },
+      "strokeColor": "#1e1e1e", "fillColor": "#ea580c", "fill": true,
+      "strokeWidth": 2.5, "opacity": 1, "colorSlot": "fur", "drawingOrder": 3
+    },
+    {
+      "id": "obj_004", "type": "ellipse", "name": "白色胸腹",
+      "relX": 0.50, "relY": 0.70,
+      "params": { "radiusX": 26, "radiusY": 28 },
+      "strokeColor": "#ffffff", "fillColor": "#ffffff", "fill": true,
+      "strokeWidth": 0, "opacity": 1, "colorSlot": "chest", "drawingOrder": 4
+    },
+    {
+      "id": "obj_005", "type": "ellipse", "name": "左脚",
+      "relX": 0.36, "relY": 0.92,
+      "params": { "radiusX": 12, "radiusY": 8 },
+      "strokeColor": "#1e1e1e", "fillColor": "#1e1e1e", "fill": true,
+      "strokeWidth": 2.5, "opacity": 1, "colorSlot": "dark", "drawingOrder": 5
+    },
+    {
+      "id": "obj_006", "type": "ellipse", "name": "右脚",
+      "relX": 0.64, "relY": 0.92,
+      "params": { "radiusX": 12, "radiusY": 8 },
+      "strokeColor": "#1e1e1e", "fillColor": "#1e1e1e", "fill": true,
+      "strokeWidth": 2.5, "opacity": 1, "colorSlot": "dark", "drawingOrder": 5
+    },
+    {
+      "id": "obj_007", "type": "path", "name": "左前肢",
+      "relX": 0.36, "relY": 0.80,
+      "params": { "points": [[0, -8], [-4, 8], [4, 8], [0, -8]], "closed": true },
+      "strokeColor": "#1e1e1e", "fillColor": "#1e1e1e", "fill": true,
+      "strokeWidth": 2, "opacity": 1, "colorSlot": "dark", "drawingOrder": 4
+    },
+    {
+      "id": "obj_008", "type": "path", "name": "右前肢",
+      "relX": 0.64, "relY": 0.80,
+      "params": { "points": [[0, -8], [-4, 8], [4, 8], [0, -8]], "closed": true },
+      "strokeColor": "#1e1e1e", "fillColor": "#1e1e1e", "fill": true,
+      "strokeWidth": 2, "opacity": 1, "colorSlot": "dark", "drawingOrder": 4
+    },
+    {
+      "id": "obj_009", "type": "circle", "name": "头",
+      "relX": 0.50, "relY": 0.34,
+      "params": { "radius": 44 },
+      "strokeColor": "#1e1e1e", "fillColor": "#ea580c", "fill": true,
+      "strokeWidth": 2.5, "opacity": 1, "colorSlot": "fur", "drawingOrder": 10
+    },
+    {
+      "id": "obj_010", "type": "triangle", "name": "左尖耳",
+      "relX": 0.30, "relY": 0.12,
+      "params": { "points": [[0, -20], [-14, 12], [14, 12]] },
+      "strokeColor": "#1e1e1e", "fillColor": "#ea580c", "fill": true,
+      "strokeWidth": 2.5, "opacity": 1, "colorSlot": "fur", "drawingOrder": 11
+    },
+    {
+      "id": "obj_011", "type": "triangle", "name": "左耳内",
+      "relX": 0.30, "relY": 0.14,
+      "params": { "points": [[0, -10], [-7, 8], [7, 8]] },
+      "strokeColor": "#fdba74", "fillColor": "#fdba74", "fill": true,
+      "strokeWidth": 0, "opacity": 1, "colorSlot": "innerEar", "drawingOrder": 12
+    },
+    {
+      "id": "obj_012", "type": "triangle", "name": "右尖耳",
+      "relX": 0.70, "relY": 0.12,
+      "params": { "points": [[0, -20], [-14, 12], [14, 12]] },
+      "strokeColor": "#1e1e1e", "fillColor": "#ea580c", "fill": true,
+      "strokeWidth": 2.5, "opacity": 1, "colorSlot": "fur", "drawingOrder": 11
+    },
+    {
+      "id": "obj_013", "type": "triangle", "name": "右耳内",
+      "relX": 0.70, "relY": 0.14,
+      "params": { "points": [[0, -10], [-7, 8], [7, 8]] },
+      "strokeColor": "#fdba74", "fillColor": "#fdba74", "fill": true,
+      "strokeWidth": 0, "opacity": 1, "colorSlot": "innerEar", "drawingOrder": 12
+    },
+    {
+      "id": "obj_014", "type": "ellipse", "name": "脸颊白色",
+      "relX": 0.50, "relY": 0.38,
+      "params": { "radiusX": 30, "radiusY": 22 },
+      "strokeColor": "#ffffff", "fillColor": "#ffffff", "fill": true,
+      "strokeWidth": 0, "opacity": 0.95, "colorSlot": "chest", "drawingOrder": 14
+    },
+    {
+      "id": "obj_015", "type": "path", "name": "尖脸轮廓左",
+      "relX": 0.36, "relY": 0.36,
+      "params": { "points": [[14, -18], [10, 5], [5, 10], [-5, 5]], "closed": false },
+      "strokeColor": "#ea580c", "fillColor": "transparent", "fill": false,
+      "strokeWidth": 4, "opacity": 1, "colorSlot": "fur", "drawingOrder": 15
+    },
+    {
+      "id": "obj_016", "type": "path", "name": "尖脸轮廓右",
+      "relX": 0.64, "relY": 0.36,
+      "params": { "points": [[-14, -18], [-10, 5], [-5, 10], [5, 5]], "closed": false },
+      "strokeColor": "#ea580c", "fillColor": "transparent", "fill": false,
+      "strokeWidth": 4, "opacity": 1, "colorSlot": "fur", "drawingOrder": 15
+    },
+    {
+      "id": "obj_017", "type": "circle", "name": "左眼白",
+      "relX": 0.40, "relY": 0.33,
+      "params": { "radius": 9 },
+      "strokeColor": "#1e1e1e", "fillColor": "#ffffff", "fill": true,
+      "strokeWidth": 2, "opacity": 1, "colorSlot": "eyeWhite", "drawingOrder": 20
+    },
+    {
+      "id": "obj_018", "type": "circle", "name": "右眼白",
+      "relX": 0.60, "relY": 0.33,
+      "params": { "radius": 9 },
+      "strokeColor": "#1e1e1e", "fillColor": "#ffffff", "fill": true,
+      "strokeWidth": 2, "opacity": 1, "colorSlot": "eyeWhite", "drawingOrder": 20
+    },
+    {
+      "id": "obj_019", "type": "circle", "name": "左眼珠",
+      "relX": 0.40, "relY": 0.34,
+      "params": { "radius": 5.5 },
+      "strokeColor": "#1e1e1e", "fillColor": "#1e1e1e", "fill": true,
+      "strokeWidth": 0, "opacity": 1, "colorSlot": "eyeBlack", "drawingOrder": 21
+    },
+    {
+      "id": "obj_020", "type": "circle", "name": "右眼珠",
+      "relX": 0.60, "relY": 0.34,
+      "params": { "radius": 5.5 },
+      "strokeColor": "#1e1e1e", "fillColor": "#1e1e1e", "fill": true,
+      "strokeWidth": 0, "opacity": 1, "colorSlot": "eyeBlack", "drawingOrder": 21
+    },
+    {
+      "id": "obj_021", "type": "circle", "name": "左眼高光1",
+      "relX": 0.38, "relY": 0.32,
+      "params": { "radius": 3 },
+      "strokeColor": "#ffffff", "fillColor": "#ffffff", "fill": true,
+      "strokeWidth": 0, "opacity": 0.9, "colorSlot": "highlight", "drawingOrder": 22
+    },
+    {
+      "id": "obj_022", "type": "circle", "name": "左眼高光2",
+      "relX": 0.42, "relY": 0.35,
+      "params": { "radius": 1.5 },
+      "strokeColor": "#ffffff", "fillColor": "#ffffff", "fill": true,
+      "strokeWidth": 0, "opacity": 0.5, "colorSlot": "highlight", "drawingOrder": 22
+    },
+    {
+      "id": "obj_023", "type": "circle", "name": "右眼高光1",
+      "relX": 0.58, "relY": 0.32,
+      "params": { "radius": 3 },
+      "strokeColor": "#ffffff", "fillColor": "#ffffff", "fill": true,
+      "strokeWidth": 0, "opacity": 0.9, "colorSlot": "highlight", "drawingOrder": 22
+    },
+    {
+      "id": "obj_024", "type": "circle", "name": "右眼高光2",
+      "relX": 0.62, "relY": 0.35,
+      "params": { "radius": 1.5 },
+      "strokeColor": "#ffffff", "fillColor": "#ffffff", "fill": true,
+      "strokeWidth": 0, "opacity": 0.5, "colorSlot": "highlight", "drawingOrder": 22
+    },
+    {
+      "id": "obj_025", "type": "ellipse", "name": "鼻子",
+      "relX": 0.50, "relY": 0.40,
+      "params": { "radiusX": 5, "radiusY": 3.5 },
+      "strokeColor": "#1e1e1e", "fillColor": "#1e1e1e", "fill": true,
+      "strokeWidth": 2, "opacity": 1, "colorSlot": "nose", "drawingOrder": 25
+    },
+    {
+      "id": "obj_026", "type": "path", "name": "嘴巴",
+      "relX": 0.50, "relY": 0.44,
+      "params": { "points": [[-7, 0], [0, 4], [7, 0]], "closed": false },
+      "strokeColor": "#1e1e1e", "fillColor": "transparent", "fill": false,
+      "strokeWidth": 2, "opacity": 1, "colorSlot": null, "drawingOrder": 26
+    },
+    {
+      "id": "obj_027", "type": "ellipse", "name": "左腮红",
+      "relX": 0.30, "relY": 0.40,
+      "params": { "radiusX": 9, "radiusY": 5 },
+      "strokeColor": "#fca5a5", "fillColor": "#fca5a5", "fill": true,
+      "strokeWidth": 0, "opacity": 0.4, "colorSlot": "blush", "drawingOrder": 40
+    },
+    {
+      "id": "obj_028", "type": "ellipse", "name": "右腮红",
+      "relX": 0.70, "relY": 0.40,
+      "params": { "radiusX": 9, "radiusY": 5 },
+      "strokeColor": "#fca5a5", "fillColor": "#fca5a5", "fill": true,
+      "strokeWidth": 0, "opacity": 0.4, "colorSlot": "blush", "drawingOrder": 40
+    },
+    {
+      "id": "obj_029", "type": "ellipse", "name": "尾巴蓬松层1",
+      "relX": 0.78, "relY": 0.60,
+      "params": { "radiusX": 18, "radiusY": 25 },
+      "strokeColor": "#1e1e1e", "fillColor": "#ea580c", "fill": true,
+      "strokeWidth": 2.5, "opacity": 1, "colorSlot": "fur", "drawingOrder": 1
+    },
+    {
+      "id": "obj_030", "type": "ellipse", "name": "尾巴蓬松层2",
+      "relX": 0.85, "relY": 0.52,
+      "params": { "radiusX": 16, "radiusY": 22 },
+      "strokeColor": "#1e1e1e", "fillColor": "#ea580c", "fill": true,
+      "strokeWidth": 2.5, "opacity": 1, "colorSlot": "fur", "drawingOrder": 1
+    },
+    {
+      "id": "obj_031", "type": "path", "name": "额头V形标记",
+      "relX": 0.50, "relY": 0.24,
+      "params": { "points": [[-10, -4], [0, 6], [10, -4]], "closed": false },
+      "strokeColor": "#1e1e1e", "fillColor": "transparent", "fill": false,
+      "strokeWidth": 2, "opacity": 0.6, "colorSlot": null, "drawingOrder": 16
+    },
+    {
+      "id": "obj_032", "type": "circle", "name": "尾巴白色尖端",
+      "relX": 0.95, "relY": 0.35,
+      "params": { "radius": 10 },
+      "strokeColor": "#ffffff", "fillColor": "#ffffff", "fill": true,
+      "strokeWidth": 0, "opacity": 1, "colorSlot": "chest", "drawingOrder": 2
+    },
+    {
+      "id": "obj_033", "type": "ellipse", "name": "头顶橙色加深",
+      "relX": 0.50, "relY": 0.22,
+      "params": { "radiusX": 20, "radiusY": 8 },
+      "strokeColor": "#c2410c", "fillColor": "#c2410c", "fill": true,
+      "strokeWidth": 0, "opacity": 0.4, "colorSlot": "fur", "drawingOrder": 13
+    },
+    {
+      "id": "obj_034", "type": "path", "name": "左脸颊线条",
+      "relX": 0.34, "relY": 0.42,
+      "params": { "points": [[0, 0], [-6, 3]], "closed": false },
+      "strokeColor": "#1e1e1e", "fillColor": "transparent", "fill": false,
+      "strokeWidth": 1.5, "opacity": 0.6, "colorSlot": null, "drawingOrder": 28
+    },
+    {
+      "id": "obj_035", "type": "path", "name": "右脸颊线条",
+      "relX": 0.66, "relY": 0.42,
+      "params": { "points": [[0, 0], [6, 3]], "closed": false },
+      "strokeColor": "#1e1e1e", "fillColor": "transparent", "fill": false,
+      "strokeWidth": 1.5, "opacity": 0.6, "colorSlot": null, "drawingOrder": 28
+    },
+    {
+      "id": "obj_036", "type": "path", "name": "身体到头颈部",
+      "relX": 0.50, "relY": 0.55,
+      "params": { "points": [[-16, 0], [-10, -10], [0, -14], [10, -10], [16, 0]], "closed": false },
+      "strokeColor": "#1e1e1e", "fillColor": "#ea580c", "fill": false,
+      "strokeWidth": 3, "opacity": 1, "colorSlot": "fur", "drawingOrder": 9
+    },
+    {
+      "id": "obj_037", "type": "ellipse", "name": "胸部白色延伸",
+      "relX": 0.50, "relY": 0.62,
+      "params": { "radiusX": 18, "radiusY": 12 },
+      "strokeColor": "#ffffff", "fillColor": "#ffffff", "fill": true,
+      "strokeWidth": 0, "opacity": 1, "colorSlot": "chest", "drawingOrder": 8
+    },
+    {
+      "id": "obj_038", "type": "circle", "name": "瞳孔光泽",
+      "relX": 0.40, "relY": 0.33,
+      "params": { "radius": 2 },
+      "strokeColor": "#4a2800", "fillColor": "#4a2800", "fill": true,
+      "strokeWidth": 0, "opacity": 0.3, "colorSlot": null, "drawingOrder": 21
+    },
+    {
+      "id": "obj_039", "type": "circle", "name": "瞳孔光泽右",
+      "relX": 0.60, "relY": 0.33,
+      "params": { "radius": 2 },
+      "strokeColor": "#4a2800", "fillColor": "#4a2800", "fill": true,
+      "strokeWidth": 0, "opacity": 0.3, "colorSlot": null, "drawingOrder": 21
+    },
+    {
+      "id": "obj_040", "type": "path", "name": "鼻子到嘴线",
+      "relX": 0.50, "relY": 0.42,
+      "params": { "points": [[0, 0], [0, 4]], "closed": false },
+      "strokeColor": "#1e1e1e", "fillColor": "transparent", "fill": false,
+      "strokeWidth": 1.5, "opacity": 1, "colorSlot": null, "drawingOrder": 25
+    },
+    {
+      "id": "obj_041", "type": "ellipse", "name": "尾巴阴影",
+      "relX": 0.82, "relY": 0.62,
+      "params": { "radiusX": 12, "radiusY": 18 },
+      "strokeColor": "#c2410c", "fillColor": "#c2410c", "fill": true,
+      "strokeWidth": 0, "opacity": 0.3, "colorSlot": "fur", "drawingOrder": 2
+    },
+    {
+      "id": "obj_042", "type": "path", "name": "小微笑",
+      "relX": 0.50, "relY": 0.45,
+      "params": { "points": [[-4, 0], [0, 2], [4, 0]], "closed": false },
+      "strokeColor": "#1e1e1e", "fillColor": "transparent", "fill": false,
+      "strokeWidth": 1.5, "opacity": 0.6, "colorSlot": null, "drawingOrder": 26
+    }
+  ]
+}
