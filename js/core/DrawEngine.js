@@ -599,4 +599,163 @@ export class DrawEngine {
     tmpCtx.drawImage(this.canvas, 0, 0);
     return tmpCanvas.toDataURL('image/png');
   }
+
+  // ========== Q版风格渲染方法 ==========
+
+  /**
+   * 应用Q版风格默认值到 DrawingObject
+   */
+  applyQBStyle(obj) {
+    if (!obj.strokeColor) obj.strokeColor = QB_STYLE.STROKE_COLOR;
+    if (!obj.strokeWidth) obj.strokeWidth = QB_STYLE.STROKE_WIDTH;
+    if (obj.fill === undefined) obj.fill = true;
+    return obj;
+  }
+
+  /**
+   * 绘制眼睛高光（白色圆点）
+   */
+  _drawQBHighlight(ctx, eyeObj) {
+    const { radius: r = 8, rx = 8, ry = 8 } = eyeObj.params || {};
+    const eyeR = Math.max(r, rx, ry);
+    // 主高光
+    const hR = Math.min(Math.max(eyeR * 0.35, QB_STYLE.HIGHLIGHT_RADIUS_MIN), QB_STYLE.HIGHLIGHT_RADIUS_MAX);
+    ctx.fillStyle = QB_STYLE.HIGHLIGHT_COLOR;
+    ctx.globalAlpha = 0.9;
+    ctx.beginPath();
+    ctx.arc(eyeObj.x + eyeR * 0.25, eyeObj.y - eyeR * 0.25, hR, 0, Math.PI * 2);
+    ctx.fill();
+    // 副高光
+    const hR2 = Math.min(Math.max(eyeR * 0.18, 1.5), QB_STYLE.HIGHLIGHT_RADIUS_MAX);
+    ctx.globalAlpha = 0.5;
+    ctx.beginPath();
+    ctx.arc(eyeObj.x - eyeR * 0.15, eyeObj.y + eyeR * 0.1, hR2, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.globalAlpha = 1;
+  }
+
+  /**
+   * 绘制腮红（粉色半透明椭圆）
+   */
+  _drawQBBlush(ctx, x, y, radiusX, radiusY) {
+    ctx.fillStyle = QB_STYLE.BLUSH_COLOR;
+    ctx.globalAlpha = QB_STYLE.BLUSH_OPACITY;
+    ctx.beginPath();
+    ctx.ellipse(x, y, Math.max(1, radiusX), Math.max(1, radiusY), 0, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.globalAlpha = 1;
+  }
+
+  /**
+   * 绘制Q版鼻子
+   * @param {'triangle'|'dot'|'oval'} type
+   */
+  _drawQBNose(ctx, x, y, type = 'triangle') {
+    ctx.fillStyle = '#f472b6';
+    ctx.strokeStyle = QB_STYLE.STROKE_COLOR;
+    ctx.lineWidth = 1.5;
+    if (type === 'triangle') {
+      ctx.beginPath();
+      ctx.moveTo(x, y - 3);
+      ctx.lineTo(x - 3, y + 2);
+      ctx.lineTo(x + 3, y + 2);
+      ctx.closePath();
+      ctx.fill();
+      ctx.stroke();
+    } else if (type === 'dot') {
+      ctx.beginPath();
+      ctx.arc(x, y, 3, 0, Math.PI * 2);
+      ctx.fill();
+    } else {
+      ctx.beginPath();
+      ctx.ellipse(x, y, 3, 2, 0, 0, Math.PI * 2);
+      ctx.fill();
+    }
+  }
+
+  /**
+   * 一次性渲染完整Q版形象（用于模板实例化）
+   * @param {Object[]} parts - TemplatePart 数组
+   * @param {Object} options - size/position/colorOverrides
+   * @returns {import('./ObjectStore.js').DrawingObject} 根对象（composite）
+   */
+  renderQBFigure(parts, options = {}) {
+    const { size = { width: 200, height: 200 }, position = { x: 0, y: 0 }, colorOverrides = {} } = options;
+    // 按 drawingOrder 排序
+    const sorted = [...parts].sort((a, b) => (a.drawingOrder || 0) - (b.drawingOrder || 0));
+    // 应用颜色覆盖和Q版默认值
+    for (const part of sorted) {
+      if (part.colorSlot && colorOverrides[part.colorSlot]) {
+        if (part.fill === false || part.fillColor === null) {
+          part.strokeColor = colorOverrides[part.colorSlot];
+        } else {
+          part.fillColor = colorOverrides[part.colorSlot];
+        }
+      }
+      this.applyQBStyle(part);
+    }
+    // 添加到 ObjectStore 并渲染
+    const root = {
+      id: `fig_${Date.now()}`,
+      type: 'composite',
+      name: 'Q版图形',
+      x: position.x, y: position.y,
+      params: {},
+      strokeColor: null, fillColor: null, fill: false,
+      strokeWidth: null, opacity: 1, rotation: 0,
+      scaleX: 1, scaleY: 1, visible: true, locked: false,
+      layer: null, children: sorted, path: null,
+      gradient: null, shadow: null, templateRef: null,
+    };
+    this.objectStore.addObject(root);
+    this.render();
+    return root;
+  }
+
+  // ========== 逐步绘制动画 ==========
+
+  /**
+   * 逐步绘制动画 — 逐个添加对象并渲染
+   * @param {Object[]} actions - 操作数组
+   * @param {Object} options - stepDelay/onProgress/onComplete
+   */
+  async animateActions(actions, options = {}) {
+    const { stepDelay = 60, onProgress, onComplete } = options;
+    const allObjects = [];
+
+    // 提取所有需要添加的对象
+    for (const action of actions) {
+      if (action.op === 'add' && action.object) {
+        allObjects.push(action.object);
+      } else if (action.op === 'batch' && action.actions) {
+        for (const sub of action.actions) {
+          if (sub.object) allObjects.push(sub.object);
+        }
+      }
+    }
+
+    // 逐步添加并渲染
+    for (let i = 0; i < allObjects.length; i++) {
+      this.applyQBStyle(allObjects[i]);
+      this.objectStore.addObject(allObjects[i]);
+      this.render();
+      if (onProgress) onProgress(i + 1, allObjects.length);
+      if (i < allObjects.length - 1) {
+        await new Promise(r => setTimeout(r, stepDelay));
+      }
+    }
+
+    if (onComplete) onComplete(allObjects.length);
+  }
+
+  /**
+   * 模板专用逐步绘制
+   */
+  async animateTemplateParts(parts, options = {}) {
+    const sorted = [...parts].sort((a, b) => (a.drawingOrder || 0) - (b.drawingOrder || 0));
+    return this.animateActions(
+      sorted.map(p => ({ op: 'add', object: p })),
+      options
+    );
+  }
 }
